@@ -10,7 +10,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Practicing");
+            //This is for showing initial score
+
+            Console.WriteLine("Your score is" + Birthscore);
+            int Birthscore = 0;
         }
     }
 }
