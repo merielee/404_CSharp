@@ -14,13 +14,21 @@ namespace ConsoleApp1
             int Birthscore = 0;
             Console.WriteLine("Your score is" + Birthscore);
 
+
             {
-                //Add score to initial score
+                //Dice function
                 int RollDice;
                 Random r = new Random();
                 int genRand = r.Next(1, 7);
                 Console.WriteLine("Fate = " + genRand);
+
+                //Add score to Birthscore
+                int Lifescore = Birthscore + genRand;
+                Console.WriteLine("Lifescore = " + genRand);
             }
-        }
-    }
-}
+            { 
+                
+             
+
+
+            }
