@@ -18,7 +18,7 @@ namespace ConsoleApp1
                 //Add score to initial score
                 int RollDice;
                 Random r = new Random();
-                int genRand = r.Next(10, 50);
+                int genRand = r.Next(1, 7);
                 Console.WriteLine("Fate = " + genRand);
             }
         }
