@@ -29,7 +29,16 @@ namespace ConsoleApp1
 
             //Roll dice until 50 is reach
             Console.WriteLine("Keep living");
-            for (int i = Lifescore; i < 50; i++) ;
+
+            int i = Lifescore;
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            while (i < 50);
+        
             Console.WriteLine("Now you've live");
 
             Console.Read();
