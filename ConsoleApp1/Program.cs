@@ -14,7 +14,6 @@ namespace ConsoleApp1
             int Birthscore = 0;
             Console.WriteLine("Your score is" + Birthscore);
 
-
             {
                 //Dice function
                 int RollDice;
@@ -29,6 +28,9 @@ namespace ConsoleApp1
                 //Roll dice until 50 is reach
                 Console.WriteLine("Keep living");
                 for (int i = Lifescore; i < 50; i++) ;
+
+
             }
         }
+    }
 }
