@@ -25,10 +25,10 @@ namespace ConsoleApp1
                 //Add score to Birthscore
                 int Lifescore = Birthscore + genRand;
                 Console.WriteLine("Lifescore = " + genRand);
-            }
-            { 
-                
-             
 
-
+                //Roll dice until 50 is reach
+                Console.WriteLine("Keep living");
+                for (int i = Lifescore; i < 50; i++) ;
             }
+        }
+}
