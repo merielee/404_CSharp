@@ -10,27 +10,35 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Player1 Starting");
+
             //This is for showing initial score
             int Birthscore = 0;
-            Console.WriteLine("Your score is" + Birthscore);
+            Console.WriteLine("Your score is " + Birthscore);
 
-            {
-                //Dice function
-                int RollDice;
-                Random r = new Random();
-                int genRand = r.Next(1, 7);
-                Console.WriteLine("Fate = " + genRand);
+            //Dice function
+            Console.WriteLine("Rolling Fate");
+            int RollDice;
+            Random r = new Random();
+            int genRand = r.Next(1, 7);
+            Console.WriteLine("Fate = " + genRand);
 
-                //Add score to Birthscore
-                int Lifescore = Birthscore + genRand;
-                Console.WriteLine("Lifescore = " + genRand);
+            //Add score to Birthscore
+            int Lifescore = Birthscore + genRand;
+            Console.WriteLine("Lifescore = " + genRand);
 
-                //Roll dice until 50 is reach
-                Console.WriteLine("Keep living");
-                for (int i = Lifescore; i < 50; i++) ;
+            //Roll dice until 50 is reach
+            Console.WriteLine("Keep living");
+            for (int i = Lifescore; i < 50; i++) ;
+            Console.WriteLine("Now you've live");
+
+            Console.Read();
 
 
-            }
+
+            //Establishing Players
+            Object Player1;
+
         }
     }
 }
