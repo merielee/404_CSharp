@@ -11,3 +11,14 @@
 
 
             string userName = Console.ReadLine();
+
+
+        static int Lifescore(int Rolldi) 
+
+            //How to keep score
+            public void Keepscore()
+            {
+                int KeepScore(int Birthscore, int Family, int Friends);
+                private int Family = 0;
+            }
+
