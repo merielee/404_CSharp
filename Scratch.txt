@@ -1,0 +1,13 @@
+                {
+                (int_Family, int_Friends)
+                Family = _Family
+                Friends = _Friends
+    }
+
+                
+
+                
+               Totalscore
+
+
+            string userName = Console.ReadLine();

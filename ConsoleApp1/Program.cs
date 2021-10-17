@@ -15,40 +15,51 @@ namespace ConsoleApp1
 
         Object Player;
 
-        // Scoreboard
-        static void Player1 (string "Player1", int Family, int Friends)
-
         //Establishing Players
 
+        string Name;
+        int Birthscore;
+
+        static void Main(string[] args)
         {
-               
+            Player spawn = new Player();
+            spawn.Name = "Player 1";
+            spawn.Score = 0;
+            Console.WriteLine(spawn.Name);
+            Console.WriteLine(spawn.Score);
+        }
+        public void Showscore();
 
-                public String Name = "Player 1";
-             
-                public int Family;
-                public int Friends;
 
-        static void 
+            public Player Player1 = new Player();
+            public Player Player2 = new Player();
+            Console.WriteLine(Player.Player1);
+            Console.WriteLine(Player.Player2);
 
-        public struct TotalScore;
-                
-                {
-                (int_Family, int_Friends)
-                Family = _Family
-                Friends = _Friends
+     
+
+            Console.ReadKey();
+
+     }
     }
 
-                
 
-                
-               Totalscore
+             
+                public int Family = 0;
+                public int Friends = 0;
+                public struct TotalScore;
+
+        
+
+        static int ShowScore(int Birthscore, int Family, int Friends)
+                {
+                    return Birthscore + Family + Friends;
+                }
+              
 
 
-            string userName = Console.ReadLine();
-
-
-            //This is for showing initial score
-            int Birthscore = 0;
+        //This is for showing initial score
+        int Birthscore = 0;
                 Console.WriteLine("Your score is " + Birthscore);
 
 	            //Dice function
@@ -80,10 +91,16 @@ namespace ConsoleApp1
 
 	            while (i< 50);
 
+                // Scoreboard
+                static void PlayerScore;
+                List<PlayerScore> score = new List<PlayerScore>();
+                int Birthscore;
+                int Family;
+                int Friends;
 
-                //Need break at some point
+//Need break at some point
 
-	            Console.WriteLine("Now you've live");
+Console.WriteLine("Now you've live");
 
 	            Console.Read();
 
