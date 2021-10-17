@@ -10,7 +10,6 @@ namespace ConsoleApp1
     {
         public void Setup(string[] args)
 
-
         //RollDice method
         {
             Random r = new Random();
