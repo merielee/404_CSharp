@@ -8,23 +8,38 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args);                
-              
+        static void Main(string[] args);
+
         //Establish Board
-           Object Board  
+        Object Board;
 
-           Object Player
+        Object Player;
 
-            //Establishing Players
-                        
-            {
+        // Scoreboard
+        static void Player1 (string "Player1", int Family, int Friends)
+
+        //Establishing Players
+
+        {
+               
+
                 public String Name = "Player 1";
-
+             
                 public int Family;
                 public int Friends;
 
-                public TotalScore
-                struct TotalScore.
+        static void 
+
+        public struct TotalScore;
+                
+                {
+                (int_Family, int_Friends)
+                Family = _Family
+                Friends = _Friends
+    }
+
+                
+
                 
                Totalscore
 
@@ -38,7 +53,10 @@ namespace ConsoleApp1
 
 	            //Dice function
 	            Console.WriteLine("Rolling Fate");
-	            int RollDice;
+	            
+            //RollDice method
+            static void RollDice(Random + Birthscore)
+            int RollDice;
                             Random r = new Random();
                             int genRand = r.Next(1, 7);
                             Console.WriteLine("Fate = " + genRand);
@@ -61,6 +79,9 @@ namespace ConsoleApp1
 	            }
 
 	            while (i< 50);
+
+
+                //Need break at some point
 
 	            Console.WriteLine("Now you've live");
 
