@@ -8,46 +8,71 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Player1 Starting");
+        static void Main(string[] args);                
+              
+        //Establish Board
+           Object Board  
+
+           Object Player
+
+            //Establishing Players
+                        
+            {
+                public String Name = "Player 1";
+
+                public int Family;
+                public int Friends;
+
+                public TotalScore
+                struct TotalScore.
+                
+               Totalscore
+
+
+            string userName = Console.ReadLine();
+
 
             //This is for showing initial score
             int Birthscore = 0;
-            Console.WriteLine("Your score is " + Birthscore);
+                Console.WriteLine("Your score is " + Birthscore);
 
-            //Dice function
-            Console.WriteLine("Rolling Fate");
-            int RollDice;
-            Random r = new Random();
-            int genRand = r.Next(1, 7);
-            Console.WriteLine("Fate = " + genRand);
+	            //Dice function
+	            Console.WriteLine("Rolling Fate");
+	            int RollDice;
+                            Random r = new Random();
+                            int genRand = r.Next(1, 7);
+                            Console.WriteLine("Fate = " + genRand);
 
-            //Add score to Birthscore
-            int Lifescore = Birthscore + genRand;
-            Console.WriteLine("Lifescore = " + genRand);
+	            //Add score to Birthscore
+	            int Lifescore = Birthscore + genRand;
+                            Console.WriteLine("Lifescore = " + genRand);
 
-            //Roll dice until 50 is reach
-            Console.WriteLine("Keep living");
+	            
+                
+                //Roll dice until 50 is reach
+	            Console.WriteLine("Keep living");
 
-            int i = Lifescore;
-            do
-            {
-                Console.WriteLine(i);
-                i++;
-            }
+	            int i = Lifescore;
 
-            while (i < 50);
-        
-            Console.WriteLine("Now you've live");
+	            do
+	            {
+		            Console.WriteLine(i);
+		            i++;
+	            }
 
-            Console.Read();
+	            while (i< 50);
 
+	            Console.WriteLine("Now you've live");
 
+	            Console.Read();
 
-            //Establishing Players
-            Object Player1;
+                
 
-        }
+    
     }
+            
+            
+
+   
 }
+
