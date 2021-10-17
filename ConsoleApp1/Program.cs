@@ -12,69 +12,48 @@ namespace ConsoleApp1
 
         //Establish Board
         Object Board;
-
-        Object Player;
-
-        //Establishing Players
-
-        string Name;
-        int Birthscore;
-
-        static void Main(string[] args)
-        {
-            Player spawn = new Player();
-            spawn.Name = "Player 1";
-            spawn.Score = 0;
-            Console.WriteLine(spawn.Name);
-            Console.WriteLine(spawn.Score);
-        }
-        public void Showscore();
-
-
-            public Player Player1 = new Player();
-            public Player Player2 = new Player();
-            Console.WriteLine(Player.Player1);
-            Console.WriteLine(Player.Player2);
-
-     
-
-            Console.ReadKey();
-
-     }
-    }
-
-
-             
-                public int Family = 0;
-                public int Friends = 0;
-                public struct TotalScore;
-
         
+        Object Player;
+        
+            //Establishing Players
 
-        static int ShowScore(int Birthscore, int Family, int Friends)
-                {
-                    return Birthscore + Family + Friends;
-                }
-              
+            string Name;
+            int Birthscore;
 
+            static void Main(string[] args)
+            {
+                Player spawn = new Player();
+                spawn.Name = "Player 1";
+                spawn.Birthscore = 0;
+                Console.WriteLine(spawn.Name);
+                Console.WriteLine(spawn.Birthscore);
 
+                Player spawn2 = new Player();
+                spawn2.Name = "Player 2";
+                spawn2.Birthscore = 0;
+                Console.WriteLine(spawn2.Name);
+                Console.WriteLine(spawn2.Birthscore);
+
+                Console.ReadKey();
+   
+             }
+        
         //This is for showing initial score
-        int Birthscore = 0;
-                Console.WriteLine("Your score is " + Birthscore);
+                int Birthscore = 0;
 
-	            //Dice function
-	            Console.WriteLine("Rolling Fate");
+	                    //Dice function
+	                    Console.WriteLine("Rolling Fate");
 	            
-            //RollDice method
-            static void RollDice(Random + Birthscore)
-            int RollDice;
-                            Random r = new Random();
-                            int genRand = r.Next(1, 7);
-                            Console.WriteLine("Fate = " + genRand);
+                    //RollDice method
+                    static void RollDice(Random + Birthscore)
+                    int RollDice;
+                                    Random r = new Random();
+                                    int genRand = r.Next(1, 7);
+                                    Console.WriteLine("Fate = " + genRand);
 
-	            //Add score to Birthscore
-	            int Lifescore = Birthscore + genRand;
-                            Console.WriteLine("Lifescore = " + genRand);
+	                    //Add score to Birthscore
+	                    int Lifescore = Birthscore + genRand;
+                                    Console.WriteLine("Lifescore = " + genRand);
 
 	            
                 
@@ -98,7 +77,24 @@ namespace ConsoleApp1
                 int Family;
                 int Friends;
 
-//Need break at some point
+    //Need break at some point
+
+    //How to keep score
+    public void Keepscore()
+    {
+        static int KeepScore(int Birthscore, int Family, int Friends);
+            private int Family = 0;
+    private int Friends = 0;
+    public struct TotalScore;
+
+            {
+                return Birthscore + Family + Friends;
+            }
+        }
+                Console.WriteLine("Your score is " + Birthscore);
+
+    }
+
 
 Console.WriteLine("Now you've live");
 
