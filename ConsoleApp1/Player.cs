@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 public class Player
 {
+    string Name;
+    int Family;
+    int Friends;
+
     public void Setup(string[] args)
 
     {
         //Establishing Players
-
-        string Name;
-        int Family;
-        int Friends;               
+                   
             
                 Player spawn = new Player();
                 spawn.Name = "Player 1";
