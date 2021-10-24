@@ -18,8 +18,8 @@ namespace DiceGame
 
             Random random = new Random();
 
-            // Loop 50 times
-            for (int i = 0; i < 50; i++)
+            // Loop 5 times
+            for (int i = 0; i < 5; i++)
             {
                 // Displays message asking player1 to press any key
                 Console.WriteLine("Press any key to roll the dice.");
@@ -70,7 +70,7 @@ namespace DiceGame
                 }
 
                 // Displays player1 and player2 scores
-                Console.WriteLine("The score is now - player1 : " + player1Points + ". player2 : " + player2Points + ".");
+                Console.WriteLine("The score is now - Player 1 : " + player1Points + ". Player 2 : " + player2Points + ".");
                 
                 // Creates an empty line in between each round
                 Console.WriteLine(); 
