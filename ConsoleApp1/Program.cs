@@ -38,6 +38,10 @@ namespace ConsoleApp1
             Console.WriteLine(spawn2.Family);
             Console.WriteLine(spawn2.Friends);
 
+            
+            int playerRandomNum;
+            int enemyRandomNum;
+
             Console.ReadKey();                       
 
             int playerRandomNum;
@@ -45,6 +49,7 @@ namespace ConsoleApp1
             Random random = new Random();
 
             for (int i = 0; i < 10; i++)
+
             {
                 Console.WriteLine("Press any key to roll the dice.");
 
@@ -52,6 +57,9 @@ namespace ConsoleApp1
 
                 playerRandomNum = random.Next(1, 7);
                 Console.WriteLine("You rolled a " + playerRandomNum);
+
+                enemyRandomNum = random.Next(1, 7);
+                Console.WriteLine("Enemy AI rolled a " + enemyRandomNum);
             }
 
             Console.ReadKey();
