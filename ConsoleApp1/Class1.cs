@@ -9,5 +9,6 @@ namespace ConsoleApp1
     public class LifeareaScore
     {
         public int Lifeareas = 0;
+
     }
 }

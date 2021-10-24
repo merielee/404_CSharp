@@ -8,17 +8,16 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int ThrowDice()
+        public int ThrowDice()
         {
             Random r = new Random();
             int genRand = r.Next(1, 7);
             Console.WriteLine("" + genRand);
 
             return genRand;
-
-        }
-        public static void Main(string[] args)
-
+        }              
+                
+            public static void Main(string[] args)
 
         {
             //Establishing Players
@@ -39,28 +38,25 @@ namespace ConsoleApp1
             Console.WriteLine(spawn2.Family);
             Console.WriteLine(spawn2.Friends);
 
+            Console.ReadKey();                       
+
+            int playerRandomNum;
+
+            Random random = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Press any key to roll the dice.");
+
+                Console.ReadKey();
+
+                playerRandomNum = random.Next(1, 7);
+                Console.WriteLine("You rolled a " + playerRandomNum);
+            }
+
             Console.ReadKey();
 
-            //Add DiceNumber to Lifeareas
-            spawn.Family = spawn.Family + ThrowDice();
-            Console.WriteLine(spawn.Name);
-            Console.WriteLine(spawn.Family);
-            Console.WriteLine(spawn.Friends);
-
-            spawn2.Family = spawn2.Family + ThrowDice();
-
-            Console.WriteLine(spawn2.Name);
-            Console.WriteLine(spawn2.Family);
-            Console.WriteLine(spawn2.Friends);
-
-            Console.ReadKey();
-
-
-            //Roll dice until 50 is reach
-            Console.WriteLine("Keep living");
-
-
-            
+            Console.WriteLine("Now you've live");
 
             Console.Read();
         }

@@ -22,3 +22,22 @@
                 private int Family = 0;
             }
 
+            //Roll dice 50 times
+            Console.WriteLine("Keep living");
+                                  
+            int TotalScore = NewScore;
+            do
+            {
+                //Console.WriteLine(TotalScore);
+                TotalScore++;
+            }
+
+            while (TotalScore < 50);
+
+            System.Console.WriteLine("" + TotalScore);
+
+https://codereview.stackexchange.com/questions/133667/pigdice-game-in-c
+https://thecoderscat.wordpress.com/2020/07/05/creating-a-simple-dice-game-in-csharp/
+
+
+
