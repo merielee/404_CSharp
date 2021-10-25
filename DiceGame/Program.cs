@@ -47,8 +47,9 @@ namespace DiceGame
                 // If the player1 rolls higher than player2
                 if (player1RandomNum > player2RandomNum)
                 {
-                    // Increase player1 points
-                    player1Points++;
+
+                    //Increase player1 points by rolled number
+                    player1Points = player1Points += player1RandomNum;
 
                     // Display message saying player1 has won this round
                     Console.WriteLine("Player 1 wins this round!"); 
