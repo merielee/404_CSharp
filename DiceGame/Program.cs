@@ -27,7 +27,7 @@ namespace DiceGame
             Random random = new Random();
 
             // Loop 5 times
-            for (int i = 0; i < 5; i++)
+            while (player1Points < 50 && player2Points < 50)
             {
                 // Displays message asking player1 to press any key
                 Console.WriteLine("Who will have a better life? Press any key to roll the dice.");
