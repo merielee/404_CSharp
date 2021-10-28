@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    class Player
+    class Player         
     {
-        static void Main(string[] args)
-
-        Random random = new Random();
-        int familyPoints = random.Next(1, 2);
-        int dice = random.Next(1, 7);
-
-    }
-}
+        List<Player> players = new List<Player>();
+        Player player = new Player();
+        
+     }
+}   

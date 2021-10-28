@@ -22,10 +22,11 @@ namespace DiceGame
             int player1Points = 0;
             int player2Points = 0;
 
-            int player1Family = 0;
+            Player
 
             Random random = new Random();
 
+            
             // Loop 5 times
             while (player1Points < 50 && player2Points < 50)
             {
@@ -58,15 +59,6 @@ namespace DiceGame
                     //Increase player1 points by rolled number
                     player1Points = player1Points += player1RandomNum;
 
-                    {
-                        Program points = new Program();
-                        int result;
-                        // calling the function add that will return 9 to the result vaiable.
-                        result = points.Add(player1Points, player1Family);
-                        Console.WriteLine(result);
-
-                        Console.ReadLine();
-                    }
 
                     // Display message saying player1 has won this round
                     Console.WriteLine("Player 1 wins this round!");
