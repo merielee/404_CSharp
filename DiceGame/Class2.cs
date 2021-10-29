@@ -8,14 +8,7 @@ namespace DiceGame
 {
     class ThrowDice
     {
-        public Random random = new Random();
-        public int RolledDice = random.Next(1, 7);
-
-        public int getNumber()
-        {
-            return random;
-        }         
+    }    
 
 
     }
-}

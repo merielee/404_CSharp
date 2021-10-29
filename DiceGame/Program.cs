@@ -12,19 +12,12 @@ namespace DiceGame
         {
             List<Player> players = new List<Player>();
             players.Add(new Player());
-            players[0].Lived = 0;
-            players[0].BoardPosition = 0;
-
-            foreach (Player stats in players)
-            {
-                Console.WriteLine(stats.GetType());
-            }
-
-            Console.ReadLine();
-
 
             int player1RandomNum;
             int player2RandomNum;
+
+            int RandomNum = Random(1, 7);
+
 
             int player1Points = 0;
             int player2Points = 0;
@@ -41,7 +34,7 @@ namespace DiceGame
                 Console.ReadKey();
 
                 // Generates a random number between 1 and 6 for player1
-                player1RandomNum = random.Next(1, 7);
+                RandomNum = random.Next(1, 7);
 
                 // Prints out player1's randomly generated number
                 Console.WriteLine("Player 1 rolled a " + player1RandomNum);

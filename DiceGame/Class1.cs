@@ -10,6 +10,9 @@ namespace DiceGame
     {
         int Lived = 50;
         int BoardPosition = 0;
- 
-    }           
-}        
+
+        Random random = new Random();
+
+        int random_number = new Random().Next(1, 7);
+    }
+}     
