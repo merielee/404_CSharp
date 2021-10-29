@@ -8,11 +8,8 @@ namespace DiceGame
 {
     class Program
     {
-            public int Add(int player1Points, int player1Family)
-            {
-                // returns the add of num1 and num2
-                return player1Points + player1Family;
-            }
+        List<Player> players = new List<Player>();
+        Player player = new Player();
 
         static void Main(string[] args)
         {
@@ -22,12 +19,10 @@ namespace DiceGame
             int player1Points = 0;
             int player2Points = 0;
 
-            Player
-
             Random random = new Random();
 
-            
             // Loop 5 times
+            while (Player.)
             while (player1Points < 50 && player2Points < 50)
             {
                 // Displays message asking player1 to press any key

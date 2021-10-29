@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    class Player         
+    class Player
     {
-        List<Player> players = new List<Player>();
-        Player player = new Player();
-        
-     }
-}   
+        int player1RandomNum;
+        int player1Points = 0;
+        public int Lived = 0;
+        public int BoardPosition = 0;
+
+    }    
+}        
