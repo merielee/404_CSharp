@@ -8,11 +8,21 @@ namespace DiceGame
 {
     class Program
     {
-        List<Player> players = new List<Player>();
-        Player player = new Player();
-
         static void Main(string[] args)
         {
+            List<Player> players = new List<Player>();
+            players.Add(new Player());
+            players[0].Lived = 0;
+            players[0].BoardPosition = 0;
+
+            foreach (Player stats in players)
+            {
+                Console.WriteLine(stats.GetType());
+            }
+
+            Console.ReadLine();
+
+
             int player1RandomNum;
             int player2RandomNum;
 
@@ -22,7 +32,6 @@ namespace DiceGame
             Random random = new Random();
 
             // Loop 5 times
-            while (Player.)
             while (player1Points < 50 && player2Points < 50)
             {
                 // Displays message asking player1 to press any key

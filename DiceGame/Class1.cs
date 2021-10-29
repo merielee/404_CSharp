@@ -8,10 +8,8 @@ namespace DiceGame
 {
     class Player
     {
-        int player1RandomNum;
-        int player1Points = 0;
-        public int Lived = 0;
-        public int BoardPosition = 0;
-
-    }    
+        int Lived = 50;
+        int BoardPosition = 0;
+ 
+    }           
 }        
