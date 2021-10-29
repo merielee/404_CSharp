@@ -8,6 +8,12 @@ namespace DiceGame
 {
     class Player
     {
+        public String username;
+
+        public Player(String username)
+            {
+            this.username = username;
+            }
         int Lived = 50;
         int BoardPosition = 0;
 

@@ -8,16 +8,27 @@ namespace DiceGame
 {
     class Program
     {
-        public void GetPlayerData ()
-        {
-            
-            Console.WriteLine("Start play");
-        }
 
         static void Main(string[] args)
         {
+            //Create list of players
             List<Player> players = new List<Player>();
-            players.Add(new Player());
+
+            //New instance of player
+            Player player1 = new Player("A");
+
+            //Add items
+            players.Add(player1);
+
+            foreach (Player player in players) 
+            {
+                Console.WriteLine(player);            
+            }
+
+
+
+            Console.ReadKey();
+
 
             int player1RandomNum;
             int player2RandomNum;
