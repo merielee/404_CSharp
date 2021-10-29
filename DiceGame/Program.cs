@@ -8,6 +8,12 @@ namespace DiceGame
 {
     class Program
     {
+        public void GetPlayerData ()
+        {
+            
+            Console.WriteLine("Start play");
+        }
+
         static void Main(string[] args)
         {
             List<Player> players = new List<Player>();
@@ -16,16 +22,15 @@ namespace DiceGame
             int player1RandomNum;
             int player2RandomNum;
 
-            int RandomNum = Random(1, 7);
-
-
             int player1Points = 0;
             int player2Points = 0;
 
             Random random = new Random();
 
-            // Loop 5 times
+            // Loop til 50 point reached
             while (player1Points < 50 && player2Points < 50)
+
+
             {
                 // Displays message asking player1 to press any key
                 Console.WriteLine("Who will have a better life? Press any key to roll the dice.");
@@ -34,7 +39,7 @@ namespace DiceGame
                 Console.ReadKey();
 
                 // Generates a random number between 1 and 6 for player1
-                RandomNum = random.Next(1, 7);
+                player1RandomNum = random.Next(1, 7);
 
                 // Prints out player1's randomly generated number
                 Console.WriteLine("Player 1 rolled a " + player1RandomNum);
