@@ -16,10 +16,12 @@ namespace DiceGame
             List<Player> players = new List<Player>();
 
             //New instance of player
-            Player player1 = new Player();     
+            Player player1 = new Player();
+            Player player2 = new Player();
 
             //Add items
             players.Add(player1);
+            players.Add(player2);
             players.Add(RandomNum);
 
             foreach (Player player in players) 
