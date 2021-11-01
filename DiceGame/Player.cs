@@ -8,11 +8,15 @@ namespace DiceGame
 {
     class Player
     {
-        public String username { get; set; } = string.Empty;
-
         public int playerPoints = 0;
-        public int Lived = 50;
+        public int familywon = 50;
+        public int wealthwon = 50;
         public int BoardPosition = 0;
+        
+        public void player1family()
+        {
+
+        }
 
     }         
 }     

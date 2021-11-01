@@ -11,9 +11,8 @@ namespace DiceGame
         
         static void Main(string[] args)
         {
-
             //New instance of Board 
-            Board board1 = new Board();
+            Board board = new Board();
 
             //Create list of players
             List<Player> players = new List<Player>();
