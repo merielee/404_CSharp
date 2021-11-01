@@ -8,6 +8,7 @@ namespace DiceGame
 {
     class Program
     {
+        public static Player RandomNum { get; private set; }
 
         static void Main(string[] args)
         {
@@ -15,28 +16,27 @@ namespace DiceGame
             List<Player> players = new List<Player>();
 
             //New instance of player
-            Player player1 = new Player("A");
+            Player player1 = new Player();     
 
             //Add items
             players.Add(player1);
+            players.Add(RandomNum);
 
             foreach (Player player in players) 
-            {
-                Console.WriteLine(player);            
-            }
-
-
+                {
+                 Console.WriteLine(player);            
+                }
 
             Console.ReadKey();
 
 
-            int player1RandomNum;
             int player2RandomNum;
 
             int player1Points = 0;
             int player2Points = 0;
 
             Random random = new Random();
+
 
             // Loop til 50 point reached
             while (player1Points < 50 && player2Points < 50)
@@ -50,10 +50,10 @@ namespace DiceGame
                 Console.ReadKey();
 
                 // Generates a random number between 1 and 6 for player1
-                player1RandomNum = random.Next(1, 7);
+                RandomNum = random.Next(1, 7);
 
                 // Prints out player1's randomly generated number
-                Console.WriteLine("Player 1 rolled a " + player1RandomNum);
+                Console.WriteLine("Player 1 rolled a " + RandomNum);
 
                 Console.WriteLine("...");
 
@@ -67,17 +67,17 @@ namespace DiceGame
                 Console.WriteLine("Player 2 rolled a " + player2RandomNum);
 
                 // If the player1 rolls higher than player2
-                if (player1RandomNum > player2RandomNum)
+                if (RandomNum > player2RandomNum)
                 {
                     //Increase player1 points by rolled number
-                    player1Points = player1Points += player1RandomNum;
+                    player1Points = player1Points += RandomNum;
 
 
                     // Display message saying player1 has won this round
                     Console.WriteLine("Player 1 wins this round!");
                 }
                 // If the player2 rolls higher than player1
-                else if (player1RandomNum < player2RandomNum)
+                else if (RandomNum < player2RandomNum)
                 {
                     // Increase player2 points by rolled number
                     player2Points = player2Points += player2RandomNum;
@@ -121,4 +121,4 @@ namespace DiceGame
             Console.ReadKey();
         }
     }
-}    
+}

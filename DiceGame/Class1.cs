@@ -8,16 +8,11 @@ namespace DiceGame
 {
     class Player
     {
-        public String username;
+        public String username { get; set; } = string.Empty;
 
-        public Player(String username)
-            {
-            this.username = username;
-            }
-        int Lived = 50;
-        int BoardPosition = 0;
+        public int Lived = 50;
+        public int BoardPosition = 0;
+        public int RandomNum { get; set; } 
 
-        int playerRandomNum;
-               
-    }
+    }         
 }     
