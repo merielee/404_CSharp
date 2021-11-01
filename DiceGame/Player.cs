@@ -10,9 +10,9 @@ namespace DiceGame
     {
         public String username { get; set; } = string.Empty;
 
+        public int playerPoints = 0;
         public int Lived = 50;
         public int BoardPosition = 0;
-        public int RandomNum { get; set; } 
 
     }         
 }     

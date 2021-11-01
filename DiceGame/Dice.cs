@@ -13,16 +13,12 @@ namespace DiceGame
         {
             Console.WriteLine("Throw Dice");
         }
-
-        class RandomGen
+        public int Rnd()
         {
-            public void Rnd()
-            {
-                Random rnd = new Random();
-                int rand_num = rnd.Next(1, 7);
+            Random rnd = new Random();
+            int rand_num = rnd.Next(1, 7);
 
-                Console.ReadKey();
-            }
+            return rand_num;
         }
     }
 }
