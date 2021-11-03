@@ -16,6 +16,9 @@ namespace DiceGame
             //Create dice
             Dice dice = new Dice();
 
+            //Create gridspaces
+            Gridspace gridspaces = new Gridspace();
+
             //Create list of players
             List<Player> players = new List<Player>();
 
@@ -27,11 +30,9 @@ namespace DiceGame
             players.Add(player1);
             players.Add(player2);
 
-            Console.WriteLine();
-
+            
             int player1RandomNum = 0;
-            int player2RandomNum = 0;
-                        
+            int player2RandomNum = 0;                        
 
 
             // Loop til 50 point reached

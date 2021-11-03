@@ -9,7 +9,6 @@ namespace DiceGame
     class Player
     {
         public int familywon = 0;
-        public int wealthwon = 0;        
-
-    }         
+        public int wealthwon = 0;
+    }
 }     
