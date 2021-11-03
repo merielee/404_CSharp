@@ -9,7 +9,6 @@ namespace DiceGame
     class Dice
     {
         public void GetNumber()
-
         {
             Console.WriteLine("Throw Dice");
         }

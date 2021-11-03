@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace DiceGame
 {
     class Program
-    {
-        
+    {        
         static void Main(string[] args)
         {
-            //New instance of Board 
+            //Create a board
             Board board = new Board();
+
+            //Create dice
+            Dice dice = new Dice();
 
             //Create list of players
             List<Player> players = new List<Player>();
@@ -20,17 +22,20 @@ namespace DiceGame
             //New instance of player
             Player player1 = new Player();
             Player player2 = new Player();
-            Dice dice = new Dice();           
 
             //Add items
             players.Add(player1);
             players.Add(player2);
 
+            Console.WriteLine();
+
             int player1RandomNum = 0;
             int player2RandomNum = 0;
+                        
+
 
             // Loop til 50 point reached
-            while (player1.BoardPosition < 50 && player2.BoardPosition < 50)
+            while (player1.familywon < 50 && player2.familywon < 50)
 
             {
                 // Displays message asking player1 to press any key
@@ -59,8 +64,12 @@ namespace DiceGame
                 // If the player1 rolls higher than player2
                 if (player1RandomNum > player2RandomNum)
                 {
+                    //
+
+                    //Increase player1 familypoints by rolled number
+                    player1.familywon = player1RandomNum + player1.familywon;
+
                     //Increase player1 points by rolled number
-                    player1.BoardPosition = player1.BoardPosition + player1RandomNum;
 
 
                     // Display message saying player1 has won this round
@@ -70,7 +79,7 @@ namespace DiceGame
                 else if (player1RandomNum < player2RandomNum)
                 {
                     // Increase player2 points by rolled number
-                    player2.BoardPosition = player2.BoardPosition + player2RandomNum;
+                    player2.familywon = player2.familywon + player2RandomNum;
 
                     // Display message saying player2 has won this round
                     Console.WriteLine("Player 2 wins this round!");
@@ -82,21 +91,24 @@ namespace DiceGame
                     Console.WriteLine("Draw!");
                 }
 
+                //
+                Console.WriteLine("");
+
                 // Displays player1 and player2 scores
-                Console.WriteLine("The score is now - Player 1 : " + player1.BoardPosition + ". Player 2 : " + player2.BoardPosition + ".");
+                Console.WriteLine("The score is now - Player 1 : " + player1.familywon + ". Player 2 : " + player2.familywon + ".");
 
                 // Creates an empty line in between each round
                 Console.WriteLine();
             }
 
             // If the player1 has scored higher than player2
-            if (player1.BoardPosition > player2.BoardPosition)
+            if (player1.familywon > 50)
             {
                 // Display a message saying player1 wins
                 Console.WriteLine("Player 1 wins a better life!");
             }
             // If the player2 has scored higher than player1
-            else if (player1.BoardPosition < player2.BoardPosition)
+            else if (player2.familywon > 50)
             {
                 // Display message saying player1 loses
                 Console.WriteLine("Player 2 wins a better life!");
