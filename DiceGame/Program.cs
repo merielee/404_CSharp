@@ -13,12 +13,6 @@ namespace DiceGame
             //Create a board
             Board board = new Board();
 
-            //Create dice
-            Dice dice = new Dice();
-
-            //Create gridspaces
-            Gridspace gridspaces = new Gridspace();
-
             //Create list of players
             List<Player> players = new List<Player>();
 
@@ -30,6 +24,8 @@ namespace DiceGame
             players.Add(player1);
             players.Add(player2);
 
+            //Create dice
+            Dice dice = new Dice();
             
             int player1RandomNum = 0;
             int player2RandomNum = 0;                        
