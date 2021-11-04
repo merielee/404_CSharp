@@ -8,7 +8,6 @@ namespace DiceGame
 {
     public class Board
     {
-        public int numofSpaces = 0;
         public List<Gridspace> gridspaces = new List<Gridspace>();
 
         //Constructor
@@ -19,21 +18,12 @@ namespace DiceGame
 
         public class Gridspace
         {
-
             //Constructor
             public Gridspace()
             {
-                Console.WriteLine("Creating Gridspace");
-
-                int numofSpaces = 50;
-
-                for (int currentSpace = 0; currentSpace < numofSpaces; currentSpace++) ;
-                {
-                    Gridspace gridspace = new Gridspace();
-
-                }
-
+                Console.WriteLine("Creating Gridspace");                
             }
+
         }
     }
 }

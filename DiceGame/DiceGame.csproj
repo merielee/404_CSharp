@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Gridspace.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Program.cs" />

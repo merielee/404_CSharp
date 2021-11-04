@@ -24,6 +24,7 @@ namespace DiceGame
             players.Add(player1);
             players.Add(player2);
 
+
             //Create dice
             Dice dice = new Dice();
             
