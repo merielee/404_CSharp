@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 namespace DiceGame
 {
     class Gridspace
-
-        
     {
-        List<Gridspace> gridspaces = new List<Gridspace>();
 
-        Gridspace gridspace1 = new Gridspace();
-
-        gridspaces.Add(Player);
-
-
-}
-}
+    }
+    }

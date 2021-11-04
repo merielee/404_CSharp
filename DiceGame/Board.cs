@@ -8,22 +8,11 @@ namespace DiceGame
 {
     public class Board
     {
-        public List<Gridspace> gridspaces = new List<Gridspace>();
-
-        //Constructor
+                //Constructor
         public Board()
         {
             Console.WriteLine("Game starting");
         }
-
-        public class Gridspace
-        {
-            //Constructor
-            public Gridspace()
-            {
-                Console.WriteLine("Creating Gridspace");                
-            }
-
-        }
+                
     }
 }

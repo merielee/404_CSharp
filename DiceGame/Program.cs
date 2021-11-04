@@ -24,14 +24,21 @@ namespace DiceGame
             players.Add(player1);
             players.Add(player2);
 
+            List<Gridspace> gridspaces = new List<Gridspace>();
+            
+            Gridspace gridspace1 = new Gridspace();
+            Gridspace gridspace2 = new Gridspace();
+            Gridspace gridspace3 = new Gridspace();
+            Gridspace gridspace4 = new Gridspace();
+
+            gridspaces.Add(gridspace1);
+            gridspaces.Add(gridspace2);
+            gridspaces.Add(gridspace3);
+            gridspaces.Add(gridspace4);
 
             //Create dice
             Dice dice = new Dice();
             
-            int player1RandomNum = 0;
-            int player2RandomNum = 0;                        
-
-
             // Loop til 50 point reached
             while (player1.familywon < 50 && player2.familywon < 50)
 
@@ -43,10 +50,10 @@ namespace DiceGame
                 Console.ReadKey();
 
                 // Generates a random number between 1 and 6 for player1
-                player1RandomNum = dice.Rnd();
+                player1.RandomNum = dice.Rnd();
 
                 // Prints out player1's randomly generated number
-                Console.WriteLine("Player 1 rolled a " + player1RandomNum);
+                Console.WriteLine("Player 1 rolled a " + player1.RandomNum);
 
                 Console.WriteLine("...");
 
@@ -54,18 +61,24 @@ namespace DiceGame
                 System.Threading.Thread.Sleep(1000);
 
                 // Generates a random number between 1 and 6 for player2
-                player2RandomNum = dice.Rnd();
+                player2.RandomNum = dice.Rnd();
 
                 // Prints out player2's randomly generated number
-                Console.WriteLine("Player 2 rolled a " + player2RandomNum);
+                Console.WriteLine("Player 2 rolled a " + player2.RandomNum);
 
                 // If the player1 rolls higher than player2
-                if (player1RandomNum > player2RandomNum)
+                if (player1.RandomNum > player2.RandomNum)
                 {
-                    //
+                    
+                    //Player 1 must choose lifebit                 
 
-                    //Increase player1 familypoints by rolled number
-                    player1.familywon = player1RandomNum + player1.familywon;
+                    Console.WriteLine("Family or wealth");
+
+
+
+
+                //Increase player1 familypoints by rolled number
+                player1.familywon = player1.RandomNum + player1.familywon;
 
                     //Increase player1 points by rolled number
 
@@ -74,10 +87,10 @@ namespace DiceGame
                     Console.WriteLine("Player 1 wins this round!");
                 }
                 // If the player2 rolls higher than player1
-                else if (player1RandomNum < player2RandomNum)
+                else if (player1.RandomNum < player2.RandomNum)
                 {
                     // Increase player2 points by rolled number
-                    player2.familywon = player2.familywon + player2RandomNum;
+                    player2.familywon = player2.familywon + player2.RandomNum;
 
                     // Display message saying player2 has won this round
                     Console.WriteLine("Player 2 wins this round!");

@@ -19,5 +19,16 @@ namespace DiceGame
 
             return rand_num;
         }
+        public void GetLife()
+        {
+            Console.WriteLine("Family or Wealth");
+        }
+        public int RndLife()
+        {
+            Random rnd = new Random();
+            int rand_Life = rnd.Next(1, 3);
+
+            return rand_Life;
+        }
     }
 }
