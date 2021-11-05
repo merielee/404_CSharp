@@ -6,35 +6,19 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    class Gridspace
+     class Gridspace
     {
-        public class Player
+        public int lifespace = 0;
+        public void WhichLife()
         {
-            public int familyposition = 0;
-            public int wealthposition = 0;
-            
-            public Player()
-            {
-                Console.WriteLine("Players Scores");
-
-                List<Player> players = new List<Player>();
-
-                //New instance of player
-                Player player1 = new Player();
-                Player player2 = new Player();
-
-                //Add items
-                players.Add(player1);
-                players.Add(player2);
-
-                return;
-
-            }
-
+            Console.WriteLine("Your moving up on...");
         }
+        public int pointsCategory()
+        {
+            Random random = new Random();
+            int pointsCategory = random.Next(1, 3);
 
-
-
+            return pointsCategory;
+        }
     }
-
-}    
+    }    

@@ -34,13 +34,13 @@ namespace DiceGame
 
             Gridspace gridspace1 = new Gridspace();
             Gridspace gridspace2 = new Gridspace();
-            Gridspace gridspace3 = new Gridspace();
-            Gridspace gridspace4 = new Gridspace();
 
             gridspaces.Add(gridspace1);
             gridspaces.Add(gridspace2);
-            gridspaces.Add(gridspace3);
-            gridspaces.Add(gridspace4);
+
+            //Create Gridspace
+            Gridspace gridspace = new Gridspace();
+
 
             //Create dice
             Dice dice = new Dice();
@@ -75,29 +75,51 @@ namespace DiceGame
 
                 // If the player1 rolls higher than player2
                 if (player1.RandomNum > player2.RandomNum)
+
                 {
-                    //        
-                    Console.WriteLine("Player 1 you've made your family happy");
-                    
+                    //Which gridspace would affect the player
+                    gridspace.lifespace = gridspace.pointsCategory();
 
+                    if (gridspace.lifespace == 1)
+                    {
+                        //Increase family by multiplier
+                        player1.familywon = player1.familywon + player1.RandLife;
 
-                    //Increase player1 familypoints by rolled number
-                    player1.familywon = player1.RandomNum + player1.familywon;
+                    }
 
-                    //Increase player1 points by rolled number
+                    if (gridspace.lifespace == 2)
+                    {
+                        //Increase wealth by multiplier
+                        player1.wealthwon = player1.wealthwon + player1.RandLife;
 
+                    }
 
                     // Display message saying player1 has won this round
-                    Console.WriteLine("Player 1 wins this round!");
+                    Console.WriteLine("Player 1 gets a life!");
                 }
+
                 // If the player2 rolls higher than player1
                 else if (player1.RandomNum < player2.RandomNum)
                 {
-                    // Increase player2 points by rolled number
-                    player2.familywon = player2.familywon + player2.RandomNum;
+                    // Which gridspace would affect the player
+                    gridspace.lifespace = gridspace.pointsCategory();
 
-                    // Display message saying player2 has won this round
-                    Console.WriteLine("Player 2 wins this round!");
+                    if (gridspace.lifespace == 1)
+                    {
+                        //Increase family by multiplier
+                        player2.familywon = player2.familywon + player2.RandLife;
+
+                    }
+
+                    if (gridspace.lifespace == 2)
+                    {
+                        //Increase wealth by multiplier
+                        player2.wealthwon = player2.wealthwon + player2.RandLife;
+
+                    }
+
+                    // Display message saying player1 has won this round
+                    Console.WriteLine("Player 2 gets a life!");
                 }
                 // If player1 and player2 have rolled the same number
                 else
@@ -106,24 +128,25 @@ namespace DiceGame
                     Console.WriteLine("Draw!");
                 }
 
-                //
-                Console.WriteLine("");
 
                 // Displays player1 and player2 scores
-                Console.WriteLine("The score is now - Player 1 : " + player1.familywon + ". Player 2 : " + player2.familywon + ".");
+                foreach (Player player in players)
+                {
+                    Console.WriteLine(player);
+                }
 
                 // Creates an empty line in between each round
                 Console.WriteLine();
             }
 
-            // If the player1 has scored higher than player2
-            if (player1.familywon > 50)
+            // If the player1 reached the score needed before player2
+            if (player1.wealthwon > 50 && player1.wealthwon > 50)
             {
                 // Display a message saying player1 wins
                 Console.WriteLine("Player 1 wins a better life!");
             }
-            // If the player2 has scored higher than player1
-            else if (player2.familywon > 50)
+            // If the player2 eached the score needed before player1
+            else if (player2.familywon > 50 && player1.wealthwon > 50)
             {
                 // Display message saying player1 loses
                 Console.WriteLine("Player 2 wins a better life!");
