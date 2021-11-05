@@ -8,11 +8,11 @@ namespace DiceGame
 {
     public class Board
     {
-                //Constructor
+        //Constructor
         public Board()
         {
             Console.WriteLine("Game starting");
         }
-                
+
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DiceGame
 {
     class Program
-    {        
+    {
         static void Main(string[] args)
         {
             //Create a board
@@ -17,15 +17,21 @@ namespace DiceGame
             List<Player> players = new List<Player>();
 
             //New instance of player
-            Player player1 = new Player();
-            Player player2 = new Player();
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
 
-            //Add items
+            //Add player to list
             players.Add(player1);
             players.Add(player2);
 
+            //Show score
+            foreach (Player player in players)
+            {
+                Console.WriteLine(player);
+            }
+
             List<Gridspace> gridspaces = new List<Gridspace>();
-            
+
             Gridspace gridspace1 = new Gridspace();
             Gridspace gridspace2 = new Gridspace();
             Gridspace gridspace3 = new Gridspace();
@@ -38,9 +44,10 @@ namespace DiceGame
 
             //Create dice
             Dice dice = new Dice();
-            
+
+
             // Loop til 50 point reached
-            while (player1.familywon < 50 && player2.familywon < 50)
+            while (player1.familywon < 50 && player2.familywon < 50 && player1.wealthwon < 50 && player2.wealthwon < 50)
 
             {
                 // Displays message asking player1 to press any key
@@ -69,16 +76,13 @@ namespace DiceGame
                 // If the player1 rolls higher than player2
                 if (player1.RandomNum > player2.RandomNum)
                 {
+                    //        
+                    Console.WriteLine("Player 1 you've made your family happy");
                     
-                    //Player 1 must choose lifebit                 
-
-                    Console.WriteLine("Family or wealth");
 
 
-
-
-                //Increase player1 familypoints by rolled number
-                player1.familywon = player1.RandomNum + player1.familywon;
+                    //Increase player1 familypoints by rolled number
+                    player1.familywon = player1.RandomNum + player1.familywon;
 
                     //Increase player1 points by rolled number
 
