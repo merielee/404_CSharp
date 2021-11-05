@@ -41,7 +41,6 @@ namespace DiceGame
             //Create Gridspace
             Gridspace gridspace = new Gridspace();
 
-
             //Create dice
             Dice dice = new Dice();
 
@@ -140,22 +139,25 @@ namespace DiceGame
             }
 
             // If the player1 reached the score needed before player2
-            if (player1.wealthwon > 50 && player1.familywon > 50)
+            if (player1.wealthwon > 50 || player1.familywon > 50)
             {
                 // Display a message saying player1 wins
                 Console.WriteLine("Player 1 wins a better life!");
+                Console.ReadKey();
             }
             // If the player2 eached the score needed before player1
-            else if (player2.familywon > 50 && player2.wealthwon > 50)
+            else if (player2.familywon > 50 || player2.wealthwon > 50)
             {
                 // Display message saying player1 loses
                 Console.WriteLine("Player 2 wins a better life!");
+                Console.ReadKey();
             }
             // If player1 and player2 score the same amount of points
-            else
+            else 
             {
                 // Display message saying it's a draw
                 Console.WriteLine("It's a draw!");
+                Console.ReadKey();
             }
             // Wait for user input before console window closes
             Console.ReadKey();
