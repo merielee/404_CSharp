@@ -30,14 +30,6 @@ namespace DiceGame
                 Console.WriteLine(player);
             }
 
-            List<Gridspace> gridspaces = new List<Gridspace>();
-
-            Gridspace gridspace1 = new Gridspace();
-            Gridspace gridspace2 = new Gridspace();
-
-            gridspaces.Add(gridspace1);
-            gridspaces.Add(gridspace2);
-
             //Create Gridspace
             Gridspace gridspace = new Gridspace();
 
