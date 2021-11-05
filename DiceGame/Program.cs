@@ -80,18 +80,18 @@ namespace DiceGame
                     //Which gridspace would affect the player
                     gridspace.lifespace = gridspace.pointsCategory();
 
+                    player1.RandLife = dice.RndLife();
+
                     if (gridspace.lifespace == 1)
                     {
                         //Increase family by multiplier
                         player1.familywon = player1.familywon + player1.RandLife;
-
                     }
 
                     if (gridspace.lifespace == 2)
                     {
                         //Increase wealth by multiplier
                         player1.wealthwon = player1.wealthwon + player1.RandLife;
-
                     }
 
                     // Display message saying player1 has won this round
@@ -104,18 +104,18 @@ namespace DiceGame
                     // Which gridspace would affect the player
                     gridspace.lifespace = gridspace.pointsCategory();
 
+                    player2.RandLife = dice.RndLife();
+
                     if (gridspace.lifespace == 1)
                     {
                         //Increase family by multiplier
                         player2.familywon = player2.familywon + player2.RandLife;
-
                     }
 
                     if (gridspace.lifespace == 2)
                     {
                         //Increase wealth by multiplier
                         player2.wealthwon = player2.wealthwon + player2.RandLife;
-
                     }
 
                     // Display message saying player1 has won this round
@@ -140,13 +140,13 @@ namespace DiceGame
             }
 
             // If the player1 reached the score needed before player2
-            if (player1.wealthwon > 50 && player1.wealthwon > 50)
+            if (player1.wealthwon > 50 && player1.familywon > 50)
             {
                 // Display a message saying player1 wins
                 Console.WriteLine("Player 1 wins a better life!");
             }
             // If the player2 eached the score needed before player1
-            else if (player2.familywon > 50 && player1.wealthwon > 50)
+            else if (player2.familywon > 50 && player2.wealthwon > 50)
             {
                 // Display message saying player1 loses
                 Console.WriteLine("Player 2 wins a better life!");
